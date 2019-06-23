@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Words</title>
+</head>
+<body>
+
+    <button type="button"><a href="{% url 'userapp:books' user_pk=user.pk author_pk=author_pk %}">Back to Books</a></button>
+    <p>User: {{ user.username }}</p>
+    <p>{{ test }}</p>
+    <p>{{ author_name }} - {{ book_title }}</p>
+
+    <form action="{% url 'userapp:words' user_pk=user.pk author_pk=author_pk book_pk=book_pk %}" method="post">
+        {% csrf_token %}
+        {{ word_form }}
+        <input type="submit" value="Add Word">
+    </form>
+
+    {% for i in words %}
+        <p>{{ i.word }} - {{ i.translation }}</p>
+        <button>
+            <a href="{% url 'userapp:wordedit' user_pk=user.pk author_pk=author_pk book_pk=book_pk word_pk=i.pk %}">See/edit</a>
+        </button>
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+tables:
+
+user 
+
+user(FK)/author
+user(FK)/author(FK)/book
+user(FK)/author(FK)/book(FK)/word
+
+user(FK)/author(FK)/book(FK)/word(FK)
+
+"Dictionaries": {
+
+    "Dictionary_one": {
+
+        "author": "Leo Tolstoy",
+        "title": "War and Peace",
+        "words": { 
+
+            "war": {
+                "translation": "война",
+                "context": "war and peace",
+                "note": ""},
+
+            "sentence": {
+                "translation": "предложение",
+                "context": "this is a simple sentence",
+                "note": ""}
+    },
+    
+    "Dictionary_two": {
+
+        "author": "Sinclar Lewis",
+        "title": "Arrowsmith",
+        "words": { 
+
+            "word": {
+                "translation": "слово",
+                "context": "this is a simple word",
+                "note": ""},
+
+            "sentence": {
+                "translation": "предложение",
+                "context": "this is a simple sentence",
+                "note": ""}
+    },
+
+    ...
+}

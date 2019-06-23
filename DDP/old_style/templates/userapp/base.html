@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">{{ user.username|capfirst }}</a>
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="{% url 'auth:authlogout' %}">Logout</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'userapp:dictionaries' user_pk=user.pk %}">Dictionaries</a></li>
+            <li><a href="#">Excerpts</a></li>
+            {% block back %}
+            {% endblock %}
+        </ul>
+        <img id="nav-pic" src="/static/img/nav-pic.jpg" alt="nav-pic">
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

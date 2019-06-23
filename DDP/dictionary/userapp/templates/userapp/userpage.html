@@ -1,0 +1,51 @@
+{% extends "userapp/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="wrapper-userpage">
+        <div class="container-fluid">
+            <div class="row justify-content-around">
+
+                <div class="col-sm-12 col-md-4 my-1">
+                    <div class="shadow py-1 ">
+                        <h5 class="text-center">Your dictionaries:</h5>
+                    {% for i in dicts %}
+                        <div class="row m-1">
+                            <button class="author-btn">
+                                <a href="{% url 'userapp:books' user_pk=user.pk author_pk=i.pk %}">{{ i.last_name }}</a>
+                            </button>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 my-1 no-paddings-x">
+                    <div class="shadow py-1">
+                        <h5 class="text-center">Something else:</h5>
+                    {% for i in dicts %}
+                        <div class="row m-1">
+                            <button class="author-btn">
+                                <a href="{% url 'userapp:books' user_pk=user.pk author_pk=i.pk %}">{{ i.name }}</a>
+                            </button>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 my-1">
+                    <div class="shadow py-1">
+                        <h5 class="text-center">Something else:</h5>
+                    {% for i in dicts %}
+                        <div class="row m-1">
+                            <button class="author-btn">
+                                <a href="{% url 'userapp:books' user_pk=user.pk author_pk=i.pk %}">{{ i.last_name }}</a>
+                            </button>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

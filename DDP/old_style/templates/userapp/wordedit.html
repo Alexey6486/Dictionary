@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WordInfo</title>
+</head>
+<body>
+
+    <button type="button"><a href="{% url 'userapp:words' user_pk=user.pk author_pk=author_pk book_pk=book_pk %}">Back to Words</a></button>
+    <p>User: {{ user.username }}</p>
+    <p>{{ test }}</p>
+    <p>{{ author_name }} - {{ book_title }}</p>
+
+    <form action="{% url 'userapp:wordedit' user_pk=user.pk author_pk=author_pk book_pk=book_pk word_pk=word_pk %}" method="post">
+        {% csrf_token %}
+        {{ wordedit_form }}
+        <input type="submit" value="Save">
+    </form>
+
+
+</body>
+</html>

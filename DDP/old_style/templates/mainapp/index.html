@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="logo-wrapper">
+        {% if user.is_authenticated %}
+            <p>{{ user.username }}</p>
+            <button class="logo-input-submit" type="button">
+                <a href="{% url 'auth:authlogout' %}">Logout</a>
+            </button>
+        {% else %}
+            <p>{{'You are logged out.'}}</p>
+            <button class="logo-input-submit" type="button">
+                <a href="{% url 'auth:authlogin' %}">Login Page</a>
+            </button>
+        {% endif %}
+    </div>
+</body>
+</html>

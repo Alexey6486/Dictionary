@@ -1,0 +1,30 @@
+{% extends "userapp/base.html" %}
+{% load static %}
+
+{% block back %}
+    <li><a href="{% url 'userapp:userpage' %}">Back to userpage</a></li>
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'userapp:dictionaries' user_pk=user.pk %}" method="post">
+        {% csrf_token %}
+        {{ author_form }}
+        <input class="author-add-btn" type="submit" value="Add author">
+    </form>
+    <div class="wrapper">
+        <div class="flex-container">
+            <div class="box four">
+                {% for i in dicts %}
+                    <div class="author-div-flex">
+                        <button class="author-btn-dict author-name">
+                            <a href="{% url 'userapp:books' user_pk=user.pk author_pk=i.pk %}">{{ i.last_name }}</a>
+                        </button>
+                        <button class="author-btn-dict author-add-book-div">
+                            <a href="{% url 'userapp:books' user_pk=user.pk author_pk=i.pk %}">Add book</a>
+                        </button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

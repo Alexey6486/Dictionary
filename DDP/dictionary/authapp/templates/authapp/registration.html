@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <div class="logo-wrapper">
+        <h2 class="logo-h2">Registration</h2>
+        <form class="logo-form" action="{% url 'auth:authreg' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ registration_form.as_p }}
+            <input class="logo-input-submit" type="submit" value="SAVE">
+        </form>
+        <button class="logo-signup-btn" type="button"><a href="{% url 'mainpage' %}">Main Page</a></button>
+    </div>
+
+</body>
+</html>

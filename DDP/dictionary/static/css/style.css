@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+/* MAIN(login) PAGE */
+
+.wrapper {
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+.container-fluid {
+
+}
+
+.img-login {
+    max-width: 150px;
+}
+
+.form-control {
+    margin: 2% auto;
+    /*height: 50px;*/
+    /*display: inline;*/
+}
+
+.logo-input-submit {
+    margin: 4% 2% 2% 2%;
+    background: #56b45a;
+    width: 150px;
+    line-height: 40px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.logo-input-submit a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo-input-submit:hover {
+    background: #2c7cb4;
+}
+
+.logo-signup-btn {
+    margin: 2%;
+    background: white;
+    width: 150px;
+    line-height: 40px;
+    cursor: pointer;
+    border: 0.5px solid lightgrey;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.logo-signup-btn a {
+    text-decoration: none;
+    color: #363638;
+}
+
+.logo-signup-btn:hover {
+    background: #272727;
+    border: 0.5px solid #272727;
+}
+
+.logo-signup-btn:hover a {
+    color: white;
+}
+
+h2 {
+    line-height: 100px;
+   font-size: 40px;
+}
+
+.log-info {
+    text-align: center !important;
+}
+
+/* USERPAGE */
+
+.wrapper-userpage {
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .no-paddings-x {
+        padding: 0 !important;
+    }
+}
+
+.author-btn {
+    border: none;
+    width: 100%;
+    background-color: #e6e6e6;
+}
+
+.author-btn:hover {
+    background-color: #cdcdcd;
+}
+
+.author-btn a {
+    color: #3e3e3e;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.author-btn:hover a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.add-btn {
+    background-color: rgba(44, 144, 203, 0.8);
+}
+
+.add-btn input {
+    color: white;
+}
+
+.add-btn a {
+    color: white;
+}
+
+.add-btn:hover {
+    background-color: rgba(82, 175, 90, 0.69);
+}
+
+.add-btn input {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.input-author {
+    width: 100%;
+    border: none;
+    color: white;
+    background-color: rgba(44, 144, 203, 0.8);
+}
+
+.input-author:hover {
+    background-color: rgba(82, 175, 90, 0.69);
+}

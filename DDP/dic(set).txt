@@ -1,0 +1,36 @@
+ЧАСТЬ 1:
+
+1. создаем папку
+2. открываем в ней cmd, устанавливаем всякое нужное, не забудь установить django
+3. команда на создание проекта django-admin startproject projectname
+4. создаю приложение main app - django-admin startapp mainapp
+5. в mainapp создаю папки под html - templates/mainapp
+6. settings.py - INSTALLED_APPS add 'mainapp'
+9. настройка статики в settings.py, в конце добавь
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+где BASE_DIR – это путь к корню проекта.
+10. создавай папочки под статику !в корне проекта! static - внурти - css, fonts, img, js
+11. в urls в папке проекта добавил адресс главной странички path('', mainapp.main)
+(или всех, которые нужны/есть)
+12. написать контроллеры в файле views.py (папка приложения «mainapp»):
+
+from django.shortcuts import render
+
+def main (request):
+	return render(request, 'mainapp/index.html' )
+13. можно запускать html страничку, не забыть изменить пути к статике
+href= "/static/css/style.css"
+href= "/static/fonts/font-awesome/css/font-awesome.css"
+src= "/static/img/arrow.png"
+__________
+
+ЧАСТЬ 2:
+
+
+1. Создадим суперюзера 
+2. делаем makemigrations чтобы создать БД
+3. python manage.py createsuperuser
+4. Далее процесс творческий, что за чем, создаются приложения, в них формы (если это регистрация), 
+модели (товаров, пользователей и т.д.), контроллеры, работа с urls, templates и т.д.

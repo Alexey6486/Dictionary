@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+/* MAIN(login) PAGE */
+
+.logo-wrapper {
+    background-color: white;
+    border: 0.5px solid lightgrey;
+    max-width: 15%;
+    margin: auto;
+    padding: 2% 2%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 5px 5px 2px lightgrey;
+    border-radius: 10px;
+}
+
+.logo-img {
+    width: 90%;
+}
+
+.logo-h2 {
+    font-style: italic;
+    font-size: 3vw;
+    margin-top: 3%;
+    color: #272727;
+}
+
+.logo-form {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.logo-input {
+    margin: 2%;
+    padding: 0 2%;
+    width: 90%;
+    line-height: 200%;
+}
+
+label, .helptext {
+    display: none;
+}
+
+.logo-form ul {
+    display: none;
+}
+
+/*.logo-input-password {*/
+    /*margin: 2%;*/
+    /*width: 90%;*/
+    /*line-height: 200%;*/
+/*}*/
+
+.logo-input-submit {
+    margin: 2%;
+    background: #56b45a;
+    width: 50%;
+    line-height: 200%;
+    cursor: pointer;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1vw;
+    transition: .4s;
+}
+
+.logo-input-submit a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo-input-submit:hover {
+    background: #2c7cb4;
+}
+
+.logo-signup-btn {
+    margin: 2%;
+    background: white;
+    width: 50%;
+    line-height: 200%;
+    cursor: pointer;
+    border: 0.5px solid lightgrey;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1vw;
+    transition: .4s;
+}
+
+.logo-signup-btn a {
+    text-decoration: none;
+    color: #363638;
+}
+
+.logo-signup-btn:hover {
+    background: #272727;
+    border: 0.5px solid #272727;
+}
+
+.logo-signup-btn:hover a {
+    color: white;
+}
+
+/* USERPAGE */
+
+/* header */
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+}
+
+nav p {
+    font-family: Arial;
+    color: black;
+    font-size: 24px;
+    line-height: 55px;
+    float: left;
+    padding: 0 20px;
+}
+
+nav ul {
+    float: left;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    font-family: Arial;
+    color: black;
+    font-size: 14px;
+    padding: 22px 14px;
+    text-decoration: none;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px; /*inside dropdown menu*/
+    border-radius: 0px 0px 4px 4px; /*rounding off left and right bottom angles of dropdown menu*/
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 180px; /*making more space for dropdown names, to avoid line break*/
+    border-radius: 4px;
+}
+
+nav ul li ul li a {
+    padding: 8px 14px;
+}
+
+nav ul li ul li a:hover {
+    background-color: #f3f3f3;
+}
+
+#nav-pic {
+    height: 60px;
+    display: block;
+    float: right;
+}
+
+/*end header*/
+
+/* main block */
+
+.wrapper {
+    width: 100%;
+    margin-top: 2px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.box {
+    height: 100px;
+    border: 1px solid lightgray;
+    background: white;
+    /*border-radius: 10px;*/
+}
+
+.one {
+    /*background: royalblue;*/
+    flex-grow: 1;
+    margin: 0.2%;
+}
+
+.two {
+    /*background: #b1b458;*/
+    flex-grow: 1;
+    margin: 0.2% 0;
+}
+
+.three {
+    /*background: #b45e5d;*/
+    flex-grow: 3;
+    margin: 0.2%;
+}
+
+.four {
+    width: 400px;
+    margin: 0.2%;
+}
+
+.author-div {
+    display: block;
+}
+
+.author-btn {
+    border: none;
+    width: 98%;
+    margin: 1%;
+    height: 30px;
+}
+
+.author-btn a {
+    text-decoration: none;
+    color: #272727;
+}
+
+.author-input {
+    margin-left: 0.2%;
+    margin-top: 0.3%;
+    margin-right: 0;
+}
+
+.author-add-btn {
+    border: none;
+    background: #56b45a;
+    color: white;
+    line-height: 13px;
+    padding: 3px;
+}
+
+
+.author-div-flex {
+    display: flex;
+}
+
+.author-btn-dict {
+    border: none;
+    height: 30px;
+    margin: 1px;
+
+}
+
+.author-btn-dict a {
+    text-decoration: none;
+    color: #272727;
+}
+
+.author-name {
+    /*flex-grow: 3;*/
+    width: 300px;
+
+}
+
+.author-add-book-div {
+    /*flex-grow: 1;*/
+    width: 100px;
+
+}
