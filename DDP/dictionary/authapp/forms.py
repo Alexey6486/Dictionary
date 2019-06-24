@@ -35,4 +35,4 @@ class RegistrationForm(UserCreationForm): #здесь буде пользова�
         self.fields['password2'].widget.attrs['placeholder'] = 'confirm password'
         self.fields['email'].widget.attrs['placeholder'] = 'your email'
         for field in self.fields:
-            self.fields[field].widget.attrs['class'] = 'logo-input'
+            self.fields[field].widget.attrs['class'] = 'form-control'

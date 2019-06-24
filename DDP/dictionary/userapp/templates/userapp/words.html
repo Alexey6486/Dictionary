@@ -22,6 +22,13 @@
                                 <p class="mb-0"><span class="h6">Book:</span> {{ book_title }}</p>
                             </div>
                         </div>
+                        <div class="row mb-1">
+                            <div class="col-md-12">
+                                <button class="author-btn add-btn">
+                                    <a href="{% url 'userapp:bookedit' user_pk=user.pk author_pk=author_pk book_pk=book_pk %}">Edit Book Title</a>
+                                </button>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <button class="author-btn add-btn">
