@@ -10,5 +10,7 @@ urlpatterns = [
                                                                # будет адрес auth:authlogin, где auth - это здешний
                                                                # namespace, а authlogin - name в authapp/urls
     path('userpage/', include('userapp.urls', namespace='userapp')),
-    path('', mainapp.mainpage, name='mainpage')
+    path('', mainapp.mainpage, name='mainpage'),
+    path('userpage/excerpts/', include('excerptapp.urls', namespace='excerptapp')),
+    path('userpage/phrases/', include('phraseapp.urls', namespace='phraseapp')),
 ]

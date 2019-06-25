@@ -5,16 +5,22 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from .forms import AuthorCreationForm, BookCreationForm, WordCreationForm
 from .models import Dictionary, Book, Word
+from phraseapp.models import PhraseModel
+from excerptapp.models import ExcerptModel
 
 @login_required
 def userpage(request):
     check = 'главная сраница'
 
     dict_items = Dictionary.objects.filter(user=request.user.pk)
+    phrase_items = PhraseModel.objects.filter(user=request.user.pk)
+    excerpt_items = ExcerptModel.objects.filter(user=request.user.pk)
 
     content = {
         'test': check,
         'dicts': dict_items,
+        'phrases': phrase_items,
+        'excerpts': excerpt_items,
     }
 
     return render(request, 'userapp/userpage.html', content)

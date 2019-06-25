@@ -50,7 +50,7 @@
                             </div>
                             <div class="col-sm-12">
                                 <button class="author-btn add-btn">
-                                    <a href="#">Edit author</a>
+                                    <a href="{% url 'userapp:authoredit' user_pk=user.pk author_pk=author_pk %}">Edit author</a>
                                 </button>
                             </div>
                         </div>

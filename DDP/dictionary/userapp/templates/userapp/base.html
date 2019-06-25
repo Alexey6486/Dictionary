@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Welcome</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/v4-shims.css">
@@ -23,8 +23,8 @@
                 <li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
                 <li class="nav-item"><a href="{% url 'auth:authlogout' %}" class="nav-link">Logout</a></li>
                 <li class="nav-item"><a href="{% url 'userapp:dictionaries' user_pk=user.pk %}" class="nav-link">Your Dictionaries</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Your Excerpts</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Your Phrases</a></li>
+                <li class="nav-item"><a href="{% url 'excerptapp:createexcerpts' user_pk=user.pk %}" class="nav-link">Your Excerpts</a></li>
+                <li class="nav-item"><a href="{% url 'phraseapp:createphrase' user_pk=user.pk %}" class="nav-link">Your Phrases</a></li>
                 {% block back %}
                 {% endblock %}
                  <li class="nav-item ">
